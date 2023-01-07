@@ -1,6 +1,3 @@
-const words = [
-   'A','B','C','D'
-]
 
 const blockSize = 25; //we will move by 25 at a time
 const rows = 25; //number of rows
@@ -51,9 +48,8 @@ function update()
     context.fillRect(0,0,board.width,board.height); //draw the board from 0,0 to width and height
 
     //draw the food in green color
-    context.fillStyle = "white";
-    context.font = "40px Arial "
-    context.fillText(words[i],foodX,foodY,blockSize,blockSize);
+    context.fillStyle = "green";
+    context.fillRect(foodX,foodY,blockSize,blockSize);
 
     //if the snake eat the food we push the food into its body array
     if(SnakeX == foodX && SnakeY == foodY)
